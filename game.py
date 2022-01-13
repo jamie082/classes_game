@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-import mod_1
+import module
 
-class StartProgram:
+class StartProgram (object):
     def __init__ (self, name):
         self.name = name
 
@@ -21,7 +21,7 @@ class StartProgram:
         else:
             print (f"The name of the string is {answer}".format (answer))
 
-class Death:
+class Death (StartProgram):
 
     quips = [   # dictionary
             "You died. You kinda suck at this.",
@@ -33,14 +33,14 @@ class Death:
 
     print(quips)
 
-class Finished:
+class Finished (StartProgram):
 
     def enter(self):
         print("You won! Good job.")
         return 'finished'
 
 
-print(mod_1.tangerine)
+print(module.tangerine)
 
 p = StartProgram('Nikhil')
 p.print_function()
