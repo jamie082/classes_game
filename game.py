@@ -2,7 +2,7 @@
 
 import module
 
-class StartProgram (object):
+class StartProgram:
     def __init__ (self, name):
         self.name = name
 
@@ -21,7 +21,26 @@ class StartProgram (object):
         else:
             print (f"The name of the string is {answer}".format (answer))
 
+class Finished (StartProgram):
+
+    def __init__(self, first_name, last_name ="Fish"):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def swim(self):
+        print("The fis is swimming.")
+
+    def swim_backwards (self):
+        print("You won! Good job.")
+
 class Death (StartProgram):
+
+    elements = []
+
+    the_count = [5, 4, 3, 2, 1]
+
+    for i in elements:
+        print(f"You were...: {i}")
 
     quips = [   # dictionary
             "You died. You kinda suck at this.",
@@ -33,17 +52,7 @@ class Death (StartProgram):
 
     print(quips)
 
-class Finished (StartProgram):
-
-    def enter(self):
-        print("You won! Good job.")
-        return 'finished'
-
-
 print(module.tangerine)
 
 p = StartProgram('Nikhil')
 p.print_function()
-
-d = Death("print")
-# execute Death function after
