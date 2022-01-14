@@ -2,36 +2,36 @@
 
 import module
 
-class StartProgram:
-    def __init__ (self, name):
-        self.name = name
+class StartProgram():
+    def display1(self):
+        print("This is superclass")
 
-    def print_function(self):
-        print("Welcome to my Python Program!", self.name)
-        print("What do you want to do?", self.name)
-        print("1. Press (1) to win.", self.name)
-        print("2. Press (2) to die.", self.name)
+    def function(self):
+        print("Hello")
 
-        answer = input("> ")
-
-        if answer == "1":
-           print("You won!")
-        elif answer == "2":
-           print("You died.")
-        else:
-            print (f"The name of the string is {answer}".format (answer))
-
-class CentralCorridor (StartProgram): # main body
-    
+class CentralCorridor (): # main body
     def swim (self):
         print("""You have selected a very important part of the game""")
 
+    def print_function(self):
+        print("Welcome to my Python Program!")
+        print("What do you want to do?")
+        print("1. Press (1) to win.")
+        print("2. Press (2) to die.")
+
         action = input("> ")
 
-        if action == "3": 
-            print("You pressed 3...")
-
-        return "death"
+        if action == "1":
+            print("You won!")
+            return 'finished'
+        elif action == "2":
+            print ("You died.")
+            return 'death'
+        elif action == "3":
+            print ("You pressed '3'...")
+            return 'death'
+        else:
+            print (f"The name of the string is {answer}".format (answer))
 
 class Finished (StartProgram):
 
@@ -54,6 +54,9 @@ class Death (StartProgram):
     for i in elements:
         print(f"And you die in...: {i}")
 
+    def swim(self):
+        print(Death.quips[randint(0, len(self.quips) -1)])
+
     quips = [   # dictionary
             "You died. You kinda suck at this.",
             "Your Mom would be proud...if she were smarter.",
@@ -61,14 +64,16 @@ class Death (StartProgram):
             "I have a small puppy that's better at this.",
             "You're worse than your Dad's jokes."
     ]
-    
-    def swim(self):
-        print(Death.quips[randint(0, len(self.quips) -1)])
-
-
-
 
 print(module.tangerine)
 
-p = StartProgram('Nikhil')
-p.print_function()
+#  p = StartProgram('Nikhil')
+"""
+o = StartProgram()
+o.display1()
+o.function()
+"""
+
+g = CentralCorridor()
+g.print_function()
+
