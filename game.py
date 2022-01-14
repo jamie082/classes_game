@@ -14,7 +14,7 @@ class CentralCorridor (): # main body
         print("""You have selected a very important part of the game""")
 
     def print_function(self):
-        print("Welcome to my Python Program!")
+        print("Welcome to my Classes Python Program!")
         print("What do you want to do?")
         print("1. Press (1) to win.")
         print("2. Press (2) to die.")
@@ -33,7 +33,7 @@ class CentralCorridor (): # main body
         else:
             print (f"The name of the string is {answer}".format (answer))
 
-class Finished (StartProgram):
+class Finished ():
 
     def __init__(self, first_name, last_name ="Fish"):
         self.first_name = first_name
@@ -45,7 +45,7 @@ class Finished (StartProgram):
     def swim_backwards (self):
         print("You won! Good job.")
 
-class Death (StartProgram):
+class Death ():
 
     elements = []
 
@@ -66,13 +66,6 @@ class Death (StartProgram):
     ]
 
 print(module.tangerine)
-
-#  p = StartProgram('Nikhil')
-"""
-o = StartProgram()
-o.display1()
-o.function()
-"""
 
 g = CentralCorridor()
 g.print_function()
