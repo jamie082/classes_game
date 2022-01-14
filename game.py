@@ -21,6 +21,18 @@ class StartProgram:
         else:
             print (f"The name of the string is {answer}".format (answer))
 
+class CentralCorridor (StartProgram): # main body
+    
+    def swim (self):
+        print("""You have selected a very important part of the game""")
+
+        action = input("> ")
+
+        if action == "3": 
+            print("You pressed 3...")
+
+        return "death"
+
 class Finished (StartProgram):
 
     def __init__(self, first_name, last_name ="Fish"):
@@ -28,7 +40,7 @@ class Finished (StartProgram):
         self.last_name = last_name
 
     def swim(self):
-        print("The fis is swimming.")
+        print("The fish is swimming.")
 
     def swim_backwards (self):
         print("You won! Good job.")
@@ -40,7 +52,7 @@ class Death (StartProgram):
     the_count = [5, 4, 3, 2, 1]
 
     for i in elements:
-        print(f"You were...: {i}")
+        print(f"And you die in...: {i}")
 
     quips = [   # dictionary
             "You died. You kinda suck at this.",
@@ -49,8 +61,12 @@ class Death (StartProgram):
             "I have a small puppy that's better at this.",
             "You're worse than your Dad's jokes."
     ]
+    
+    def swim(self):
+        print(Death.quips[randint(0, len(self.quips) -1)])
 
-    print(quips)
+
+
 
 print(module.tangerine)
 
