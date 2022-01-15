@@ -16,7 +16,7 @@ elif action == "2":
 elif action == "3":
     print("""You pressed '3"...""")
 else:
-    print (f"The name of the string is {answer}".format (answer))
+    print (f"The name of the string is {answer}".format (action))
 
 class Finished ():
 
@@ -47,5 +47,6 @@ class Redundent ():
             "You're worse than your Dad's jokes."
     ]
 
-module = obj.print_function("Hello")
-print(new_module_output)
+s = new_module.Death("new")
+c = s.f1("Jamie", "Morrissey")
+print(c) 
