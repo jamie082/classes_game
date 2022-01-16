@@ -2,21 +2,32 @@
 
 import new_module
 
-print("Welcome to my Classes Python program!")
-print("What do you want to do?")
-print("1. Press (1) to win.")
-print("2. Press (2) to die.")
+print("Welcome to my Classes Python program! Do you want", 
+    "to go through Door #1 or Door #2?")
 
-action = input("> ")
+answer = input("> ")
 
-if action == "1":
-    print("You won")
-elif action == "2":
-    print("You died.")
-elif action == "3":
-    print("""You pressed '3"...""")
-else:
-    print (f"The name of the string is {answer}".format (action))
+if answer == "1":
+    print("What do you want to do?")
+    print("1. Press (1) to Win.")
+    print("2. Press (2) to Die.")
+
+    answer_2 = input("> ")
+
+    if answer_2 == "1":
+        print("You pressed (1)")
+    elif answer_2 == "2":
+        print("You pressed (2)")
+    else:
+        print(f"Well, doing {answer_2}")
+    
+    the_count = [5, 4, 3, 2, 1]
+    
+    for i in the_count:
+        print(f"And you die in...: {i}")
+
+elif answer == "2":
+    print("you pressed 2")
 
 class Finished ():
 
@@ -33,20 +44,3 @@ class Finished ():
 class Redundent ():
     def print_function(self, output):
         self.output = output
-
-    the_count = [5, 4, 3, 2, 1]
-
-    for i in the_count:
-        print(f"And you die in...: {i}")
-
-    quips = [
-            "You died. You kinda suck at this.",
-            "Your Mom would be proud...if she were smarter.",
-            "Such a luser.",
-            "I have a small puppy that's better at this.",
-            "You're worse than your Dad's jokes."
-    ]
-
-s = new_module.Death("new")
-c = s.f1("Jamie", "Morrissey")
-print(c) 
