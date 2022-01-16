@@ -9,6 +9,7 @@ print("Welcome to my Classes Python program! Do you want",
 answer = input("> ")
 
 class MainProgram ():
+
     def identify (name):
         print(f"You won,  {name}")
 
@@ -20,13 +21,13 @@ class MainProgram ():
         answer_2 = input("> ")
 
         if answer_2 == "1":
-            print("You pressed (1)") # You Win
+            print("You pressed (1)") # You Win, go to function
 
-        elif answer == "2":
+        elif answer_2 == "2":
            print("you pressed 2") # You Die
 
-        else:
-            print(f"Well, doing {answer_2}")
+        else:  
+            print(f"Wrong selection, {answer_2}")
             print("Error!")
 
         the_count = [5, 4, 3, 2, 1]
@@ -40,10 +41,12 @@ class End_Game():
 
         i = 0
         while count < 5:  # output bzzzzd'd 5 times
-            print ("BZZZZZZD!")
+            print ("BZZZZZZD! EOF!!")
             i += count
 
 class You_Won():
 
     def win (self):
-        MainProgram.identify('jamie')
+        var.identify()
+
+var = MainProgram.identify('jamie')

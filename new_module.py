@@ -6,4 +6,5 @@ class Death:
 
     def __str__(self):
          myString = "Name: {} , ".format(self.name)
-         return 'You Died. You kinda suck at this...'
+         return 'You Won!!!. Great News!!'
+
